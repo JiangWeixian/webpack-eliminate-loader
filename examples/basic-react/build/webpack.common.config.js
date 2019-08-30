@@ -22,9 +22,12 @@ const config = {
     rules: [
       {
         test: /\.tsx?$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          path.resolve(__dirname, '../src/pages/Home')
+        ],
         use: [
-          { loader: 'cache-loader' },
+          // { loader: 'cache-loader' },
           {
             loader: 'thread-loader',
             options: webpackConfig.common.workerPool,
@@ -34,6 +37,7 @@ const config = {
             options: webpackConfig.common.tsLoaderOptions,
           },
           { loader: 'babel-loader' },
+          { loader: 'webpack-eliminate-loader' }
         ],
       },
       {
