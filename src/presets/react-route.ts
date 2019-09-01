@@ -1,4 +1,16 @@
-import fs from 'fs'
-import path from 'path'
+import { loadTpl } from '@/utils/loadTpl'
+import { Preset } from '@/typings'
 
-export const ReactRoute = (includes: string[] = [], excludes: string[] = []) => {}
+let tpl = ''
+
+export const ReactRoute: Preset = {
+  onInit() {
+    if (tpl) {
+      return
+    }
+    tpl = loadTpl('react-route')
+  },
+  onReturn(source) {
+    return tpl || source
+  },
+}

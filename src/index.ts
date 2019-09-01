@@ -1,18 +1,25 @@
 import Webpack from 'webpack'
-import fs from 'fs'
-import path from 'path'
 
-import { validate } from './utils/validate'
+import { getOptions } from './utils/options'
+import { presetFactory, ReactRoute } from './presets'
 
-const template = fs.readFileSync(path.resolve(__dirname, '../templates/react-route.tpl')).toString()
+const presets = {
+  'react-route': presetFactory.create(ReactRoute),
+}
 
 // only process routes files
 function loader(this: Webpack.loader.LoaderContext, source: string) {
-  if (this.resourcePath.includes('Home/index.tsx')) {
-    console.log('webpack-eliminate-loader', this.resourcePath)
-    return template
+  const options = getOptions(this)
+  if (!options.preset) {
+    return source
   }
-  validate([[true, 'test']])
+  const currentPreset = presets[options.preset]
+  if (currentPreset) {
+    currentPreset.onInit()
+    if (currentPreset.onMatch(this.resourcePath, options)) {
+      return currentPreset.onReturn(source)
+    }
+  }
   return source
 }
 
