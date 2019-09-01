@@ -34,7 +34,13 @@ const config = {
             options: webpackConfig.common.tsLoaderOptions,
           },
           { loader: 'babel-loader' },
-          { loader: 'webpack-eliminate-loader' },
+          {
+            loader: 'webpack-eliminate-loader',
+            options: {
+              exclude: ['src/pages/Home'],
+              preset: 'react-route',
+            },
+          },
         ],
       },
       {
