@@ -15,7 +15,6 @@ export const presetFactory = {
         }
         if (options.exclude) {
           return options.exclude.some(v => {
-            console.log('match', resourcePath, !!resourcePath.match(v))
             return !!resourcePath.match(v)
           })
         }
