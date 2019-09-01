@@ -1,16 +1,22 @@
 import resolve from 'rollup-plugin-node-resolve'
 import commonjs from 'rollup-plugin-commonjs'
 import typescript from 'rollup-plugin-typescript2'
+import alias from 'rollup-plugin-alias'
 import pkg from './package.json'
 
 export default [
   // browser-friendly UMD build
   {
     input: 'src/index.ts',
+    external: ['ms', 'fs', 'path'],
     output: {
       name: 'webpack-eliminate-loader',
       file: pkg.browser,
       format: 'umd',
+      globals: {
+        fs: 'fs',
+        path: 'path',
+      },
     },
     plugins: [
       resolve(), // so Rollup can find `ms`
@@ -18,6 +24,10 @@ export default [
       typescript({
         typescript: require('typescript'),
       }), // so Rollup can convert TypeScript to JavaScript
+      alias({
+        resolve: ['.ts', '.js', '.tsx', '.jsx'],
+        entries: [{ find: '@/', replacement: './src/' }],
+      }),
     ],
   },
 
@@ -29,11 +39,28 @@ export default [
   // `file` and `format` for each target)
   {
     input: 'src/index.ts',
-    external: ['ms'],
+    external: ['ms', 'fs', 'path'],
     plugins: [
       commonjs(), // so Rollup can convert `ms` to an ES module
       typescript(), // so Rollup can convert TypeScript to JavaScript
     ],
-    output: [{ file: pkg.main, format: 'cjs' }, { file: pkg.module, format: 'es' }],
+    output: [
+      {
+        file: pkg.main,
+        format: 'cjs',
+        globals: {
+          fs: 'fs',
+          path: 'path',
+        },
+      },
+      {
+        file: pkg.module,
+        format: 'es',
+        globals: {
+          fs: 'fs',
+          path: 'path',
+        },
+      },
+    ],
   },
 ]
