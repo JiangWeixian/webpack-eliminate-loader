@@ -1,5 +1,6 @@
 import { Preset, Options } from '@/typings'
 import { validate } from '@/utils/validate'
+import { match } from '@/utils/match'
 
 export const presetFactory = {
   create(preset: Preset): Required<Preset> {
@@ -9,23 +10,14 @@ export const presetFactory = {
       },
       onMatch: (resourcePath: string, options: Options) => {
         if (preset.onMatch) {
+          validate([[typeof preset.onMatch !== 'function', 'preset.onMatch should be function']])
           return preset.onMatch(resourcePath, options)
         }
-        if (options.include) {
-          return options.include.some(v => {
-            return !resourcePath.match(v)
-          })
-        }
-        if (options.exclude) {
-          return options.exclude.some(v => {
-            return !!resourcePath.match(v)
-          })
-        }
-        return false
+        return match(resourcePath, options)
       },
       onReturn: source => {
         if (preset.onReturn) {
-          validate([[typeof preset.onReturn !== 'function', 'preset.onMatch should be function']])
+          validate([[typeof preset.onReturn !== 'function', 'preset.onReturn should be function']])
           return preset.onReturn(source)
         }
         return source

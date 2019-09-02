@@ -1,10 +1,11 @@
 import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
-import { presetFactory, ReactRoute } from './presets'
+import { presetFactory, ReactRoute, UmiRoute } from './presets'
 
 const presets = {
   'react-route': presetFactory.create(ReactRoute),
+  'umi-route': presetFactory.create(UmiRoute),
 }
 
 // only process routes files

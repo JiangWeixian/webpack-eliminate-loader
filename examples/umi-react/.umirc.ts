@@ -20,6 +20,17 @@ const config: IConfig = {
       },
     ],
   ],
+  chainWebpack: config => {
+    const tsUse = config.module.rules.get('ts');
+    tsUse
+      .use('webpack-eliminate-loader')
+      .loader('webpack-eliminate-loader')
+      .options({
+        preset: 'umi-route',
+        include: ['src/pages/dev'],
+      })
+      .after('ts-loader');
+  },
 };
 
 export default config;

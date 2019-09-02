@@ -1,10 +1,17 @@
 import { loadTpl } from '@/utils/loadTpl'
 import { Preset } from '@/typings'
+import { match } from '@/utils/match'
 
 let tpl = ''
-const defaultIncludes = ['layouts', 'layout', '_layout', 'index']
+const defaultIncludes = [
+  '**/layouts/**',
+  '**/*/_layout?(.tsx|.jsx)',
+  '**/index/**',
+  '**/src/index?(.tsx|jsx)',
+  '**/NotFound?(.jsx|.tsx)',
+]
 
-export const ReactRoute: Preset = {
+export const UmiRoute: Preset = {
   onInit() {
     if (tpl) {
       return
@@ -12,17 +19,10 @@ export const ReactRoute: Preset = {
     tpl = loadTpl('react-route')
   },
   onMatch: (resourcePath, options) => {
-    if (options.include) {
-      return options.include.concat(defaultIncludes).some(v => {
-        return !resourcePath.match(v)
-      })
-    }
-    if (options.exclude) {
-      return options.exclude.some(v => {
-        return !!resourcePath.match(v)
-      })
-    }
-    return false
+    return match(resourcePath, {
+      ...options,
+      include: (options.include || []).concat(defaultIncludes),
+    })
   },
   onReturn(source) {
     return tpl || source
