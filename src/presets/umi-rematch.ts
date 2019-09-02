@@ -12,6 +12,7 @@ const isRematchModel = (resourcePath: string) => {
 }
 
 export const UmiRematch: Preset = {
+  name: 'umi-rematch',
   onInit() {
     if (tpl) {
       return

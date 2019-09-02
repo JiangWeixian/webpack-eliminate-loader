@@ -4,6 +4,7 @@ import { Preset } from '@/typings'
 let tpl = ''
 
 export const ReactRoute: Preset = {
+  name: 'react-route',
   onInit() {
     if (tpl) {
       return

@@ -5,6 +5,7 @@ import { match } from '@/utils/match'
 export const presetFactory = {
   create(preset: Preset): Required<Preset> {
     return {
+      name: preset.name,
       onInit: () => {
         preset.onInit && preset.onInit()
       },

@@ -18,6 +18,7 @@ const defaultIncludes = [
 ]
 
 export const UmiRoute: Preset = {
+  name: 'umi-route',
   onInit() {
     if (tpl) {
       return
