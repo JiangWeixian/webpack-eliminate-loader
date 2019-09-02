@@ -7,8 +7,9 @@ const defaultIncludes = [
   '**/layouts/**',
   '**/*/_layout?(.tsx|.jsx)',
   '**/index/**',
-  '**/src/index?(.tsx|jsx)',
+  '**/src/pages/index?(.tsx|jsx)',
   '**/NotFound?(.jsx|.tsx)',
+  '**/src/pages/.umi/**',
 ]
 
 export const UmiRoute: Preset = {
