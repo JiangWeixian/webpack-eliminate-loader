@@ -2,6 +2,7 @@ import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
 import { presetFactory, ReactRoute, UmiRoute, UmiRematch } from './presets'
+import { Preset } from '@/typings'
 
 const presets = {
   'react-route': presetFactory.create(ReactRoute),
@@ -15,17 +16,22 @@ function loader(this: Webpack.loader.LoaderContext, source: string) {
     return source
   }
   const options = getOptions(this)
-  if (!options.preset) {
+  if (!options.presets) {
     return source
   }
-  const currentPreset = presets[options.preset]
-  if (currentPreset) {
-    currentPreset.onInit()
-    if (currentPreset.onMatch(this.resourcePath, options)) {
-      return currentPreset.onReturn(source)
+  let result = source
+  for (let i = 0; i < options.presets.length; i++) {
+    const currentPreset = presets[options.presets[i]] as Required<Preset>
+    if (currentPreset) {
+      currentPreset.onInit()
+      if (currentPreset.onMatch(this.resourcePath, options)) {
+        result = currentPreset.onReturn(source)
+        console.log(result, this.resourcePath)
+        break
+      }
     }
   }
-  return source
+  return result
 }
 
 export default loader

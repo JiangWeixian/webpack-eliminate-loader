@@ -1,7 +1,10 @@
 import React from 'react';
 import styles from './index.css';
 
+import store from '../store';
+
 export default function() {
+  console.log(store);
   return (
     <div className={styles.normal}>
       <div className={styles.welcome} />

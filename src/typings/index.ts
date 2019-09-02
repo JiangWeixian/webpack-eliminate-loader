@@ -13,7 +13,7 @@ export type Presets = {
 export type Options = {
   include?: string[]
   exclude?: string[]
-  preset?: SupportPresets
+  presets?: SupportPresets[]
 }
 
 export type Preset = {

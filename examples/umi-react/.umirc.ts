@@ -15,7 +15,7 @@ const config: IConfig = {
         dll: false,
 
         routes: {
-          exclude: [/components\//],
+          exclude: [/components\//, /models\//],
         },
       },
     ],
@@ -26,7 +26,7 @@ const config: IConfig = {
       .use('webpack-eliminate-loader')
       .loader('webpack-eliminate-loader')
       .options({
-        preset: 'umi-route',
+        presets: ['umi-route', 'umi-rematch'],
         include: ['src/pages/page-one'],
       })
       .after('ts-loader');
