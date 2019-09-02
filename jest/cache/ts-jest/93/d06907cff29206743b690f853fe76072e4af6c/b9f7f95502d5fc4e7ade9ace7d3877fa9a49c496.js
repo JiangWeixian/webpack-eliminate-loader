@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var factory_1 = require("./factory");
+exports.presetFactory = factory_1.presetFactory;
+var react_route_1 = require("./react-route");
+exports.ReactRoute = react_route_1.ReactRoute;
+var umi_route_1 = require("./umi-route");
+exports.UmiRoute = umi_route_1.UmiRoute;
+var umi_rematch_1 = require("./umi-rematch");
+exports.UmiRematch = umi_rematch_1.UmiRematch;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJmaWxlIjoiL1VzZXJzL3FpZGFudGEvRG9jdW1lbnRzL3dlYnByb2plY3RzL3dlYnBhY2stZWxpbWluYXRlLWxvYWRlci9zcmMvcHJlc2V0cy9pbmRleC50cyIsIm1hcHBpbmdzIjoiOztBQUFBLHFDQUF5QztBQUFoQyxrQ0FBQSxhQUFhLENBQUE7QUFDdEIsNkNBQTBDO0FBQWpDLG1DQUFBLFVBQVUsQ0FBQTtBQUNuQix5Q0FBc0M7QUFBN0IsK0JBQUEsUUFBUSxDQUFBO0FBQ2pCLDZDQUEwQztBQUFqQyxtQ0FBQSxVQUFVLENBQUEiLCJuYW1lcyI6W10sInNvdXJjZXMiOlsiL1VzZXJzL3FpZGFudGEvRG9jdW1lbnRzL3dlYnByb2plY3RzL3dlYnBhY2stZWxpbWluYXRlLWxvYWRlci9zcmMvcHJlc2V0cy9pbmRleC50cyJdLCJzb3VyY2VzQ29udGVudCI6WyJleHBvcnQgeyBwcmVzZXRGYWN0b3J5IH0gZnJvbSAnLi9mYWN0b3J5J1xuZXhwb3J0IHsgUmVhY3RSb3V0ZSB9IGZyb20gJy4vcmVhY3Qtcm91dGUnXG5leHBvcnQgeyBVbWlSb3V0ZSB9IGZyb20gJy4vdW1pLXJvdXRlJ1xuZXhwb3J0IHsgVW1pUmVtYXRjaCB9IGZyb20gJy4vdW1pLXJlbWF0Y2gnXG4iXSwidmVyc2lvbiI6M30=

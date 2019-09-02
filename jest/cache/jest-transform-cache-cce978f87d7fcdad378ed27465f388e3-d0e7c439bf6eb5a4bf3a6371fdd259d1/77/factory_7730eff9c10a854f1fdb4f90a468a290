@@ -1,0 +1,470 @@
+0eb85ce155c6ca5a18f5c0b406901e07
+"use strict";
+
+/* istanbul ignore next */
+var cov_airn959ql = function () {
+  var path = "/Users/qidanta/Documents/webprojects/webpack-eliminate-loader/src/presets/factory.ts";
+  var hash = "c752422d37ecb5652edbf9c9197b0970e480b988";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/Users/qidanta/Documents/webprojects/webpack-eliminate-loader/src/presets/factory.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 17
+        },
+        end: {
+          line: 3,
+          column: 44
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 14
+        },
+        end: {
+          line: 4,
+          column: 38
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 0
+        },
+        end: {
+          line: 28,
+          column: 2
+        }
+      },
+      "4": {
+        start: {
+          line: 7,
+          column: 8
+        },
+        end: {
+          line: 26,
+          column: 10
+        }
+      },
+      "5": {
+        start: {
+          line: 10,
+          column: 16
+        },
+        end: {
+          line: 10,
+          column: 49
+        }
+      },
+      "6": {
+        start: {
+          line: 13,
+          column: 16
+        },
+        end: {
+          line: 16,
+          column: 17
+        }
+      },
+      "7": {
+        start: {
+          line: 14,
+          column: 20
+        },
+        end: {
+          line: 14,
+          column: 119
+        }
+      },
+      "8": {
+        start: {
+          line: 15,
+          column: 20
+        },
+        end: {
+          line: 15,
+          column: 65
+        }
+      },
+      "9": {
+        start: {
+          line: 17,
+          column: 16
+        },
+        end: {
+          line: 17,
+          column: 60
+        }
+      },
+      "10": {
+        start: {
+          line: 20,
+          column: 16
+        },
+        end: {
+          line: 23,
+          column: 17
+        }
+      },
+      "11": {
+        start: {
+          line: 21,
+          column: 20
+        },
+        end: {
+          line: 21,
+          column: 121
+        }
+      },
+      "12": {
+        start: {
+          line: 22,
+          column: 20
+        },
+        end: {
+          line: 22,
+          column: 51
+        }
+      },
+      "13": {
+        start: {
+          line: 24,
+          column: 16
+        },
+        end: {
+          line: 24,
+          column: 30
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 6,
+            column: 12
+          },
+          end: {
+            line: 6,
+            column: 13
+          }
+        },
+        loc: {
+          start: {
+            line: 6,
+            column: 30
+          },
+          end: {
+            line: 27,
+            column: 5
+          }
+        },
+        line: 6
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 9,
+            column: 20
+          },
+          end: {
+            line: 9,
+            column: 21
+          }
+        },
+        loc: {
+          start: {
+            line: 9,
+            column: 32
+          },
+          end: {
+            line: 11,
+            column: 13
+          }
+        },
+        line: 9
+      },
+      "2": {
+        name: "(anonymous_2)",
+        decl: {
+          start: {
+            line: 12,
+            column: 21
+          },
+          end: {
+            line: 12,
+            column: 22
+          }
+        },
+        loc: {
+          start: {
+            line: 12,
+            column: 54
+          },
+          end: {
+            line: 18,
+            column: 13
+          }
+        },
+        line: 12
+      },
+      "3": {
+        name: "(anonymous_3)",
+        decl: {
+          start: {
+            line: 19,
+            column: 22
+          },
+          end: {
+            line: 19,
+            column: 23
+          }
+        },
+        loc: {
+          start: {
+            line: 19,
+            column: 40
+          },
+          end: {
+            line: 25,
+            column: 13
+          }
+        },
+        line: 19
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 10,
+            column: 16
+          },
+          end: {
+            line: 10,
+            column: 48
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 10,
+            column: 16
+          },
+          end: {
+            line: 10,
+            column: 29
+          }
+        }, {
+          start: {
+            line: 10,
+            column: 33
+          },
+          end: {
+            line: 10,
+            column: 48
+          }
+        }],
+        line: 10
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 16,
+            column: 17
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 16,
+            column: 17
+          }
+        }, {
+          start: {
+            line: 13,
+            column: 16
+          },
+          end: {
+            line: 16,
+            column: 17
+          }
+        }],
+        line: 13
+      },
+      "2": {
+        loc: {
+          start: {
+            line: 20,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 17
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 20,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 17
+          }
+        }, {
+          start: {
+            line: 20,
+            column: 16
+          },
+          end: {
+            line: 23,
+            column: 17
+          }
+        }],
+        line: 20
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "8": 0,
+      "9": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0],
+      "2": [0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "c752422d37ecb5652edbf9c9197b0970e480b988"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_airn959ql.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var validate_1 =
+/* istanbul ignore next */
+(cov_airn959ql.s[1]++, require("@/utils/validate"));
+var match_1 =
+/* istanbul ignore next */
+(cov_airn959ql.s[2]++, require("@/utils/match"));
+
+/* istanbul ignore next */
+cov_airn959ql.s[3]++;
+exports.presetFactory = {
+  create: function (preset) {
+    /* istanbul ignore next */
+    cov_airn959ql.f[0]++;
+    cov_airn959ql.s[4]++;
+    return {
+      name: preset.name,
+      onInit: function () {
+        /* istanbul ignore next */
+        cov_airn959ql.f[1]++;
+        cov_airn959ql.s[5]++;
+
+        /* istanbul ignore next */
+        (cov_airn959ql.b[0][0]++, preset.onInit) &&
+        /* istanbul ignore next */
+        (cov_airn959ql.b[0][1]++, preset.onInit());
+      },
+      onMatch: function (resourcePath, options) {
+        /* istanbul ignore next */
+        cov_airn959ql.f[2]++;
+        cov_airn959ql.s[6]++;
+
+        if (preset.onMatch) {
+          /* istanbul ignore next */
+          cov_airn959ql.b[1][0]++;
+          cov_airn959ql.s[7]++;
+          validate_1.validate([[typeof preset.onMatch !== 'function', 'preset.onMatch should be function']]);
+
+          /* istanbul ignore next */
+          cov_airn959ql.s[8]++;
+          return preset.onMatch(resourcePath, options);
+        } else
+        /* istanbul ignore next */
+        {
+          cov_airn959ql.b[1][1]++;
+        }
+
+        cov_airn959ql.s[9]++;
+        return match_1.match(resourcePath, options);
+      },
+      onReturn: function (source) {
+        /* istanbul ignore next */
+        cov_airn959ql.f[3]++;
+        cov_airn959ql.s[10]++;
+
+        if (preset.onReturn) {
+          /* istanbul ignore next */
+          cov_airn959ql.b[2][0]++;
+          cov_airn959ql.s[11]++;
+          validate_1.validate([[typeof preset.onReturn !== 'function', 'preset.onReturn should be function']]);
+
+          /* istanbul ignore next */
+          cov_airn959ql.s[12]++;
+          return preset.onReturn(source);
+        } else
+        /* istanbul ignore next */
+        {
+          cov_airn959ql.b[2][1]++;
+        }
+
+        cov_airn959ql.s[13]++;
+        return source;
+      }
+    };
+  }
+};

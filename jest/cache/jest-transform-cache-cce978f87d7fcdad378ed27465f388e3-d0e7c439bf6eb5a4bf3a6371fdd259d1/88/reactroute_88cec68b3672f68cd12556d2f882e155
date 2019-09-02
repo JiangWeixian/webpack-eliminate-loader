@@ -1,0 +1,287 @@
+fde3249b314da5ffac4c3f39b203931c
+"use strict";
+
+/* istanbul ignore next */
+var cov_kcw9ud09y = function () {
+  var path = "/Users/qidanta/Documents/webprojects/webpack-eliminate-loader/src/presets/react-route.ts";
+  var hash = "70f68f06bd0413a407d9c54f26844395f20a501e";
+  var global = new Function("return this")();
+  var gcv = "__coverage__";
+  var coverageData = {
+    path: "/Users/qidanta/Documents/webprojects/webpack-eliminate-loader/src/presets/react-route.ts",
+    statementMap: {
+      "0": {
+        start: {
+          line: 2,
+          column: 0
+        },
+        end: {
+          line: 2,
+          column: 62
+        }
+      },
+      "1": {
+        start: {
+          line: 3,
+          column: 16
+        },
+        end: {
+          line: 3,
+          column: 42
+        }
+      },
+      "2": {
+        start: {
+          line: 4,
+          column: 10
+        },
+        end: {
+          line: 4,
+          column: 12
+        }
+      },
+      "3": {
+        start: {
+          line: 5,
+          column: 0
+        },
+        end: {
+          line: 16,
+          column: 2
+        }
+      },
+      "4": {
+        start: {
+          line: 8,
+          column: 8
+        },
+        end: {
+          line: 10,
+          column: 9
+        }
+      },
+      "5": {
+        start: {
+          line: 9,
+          column: 12
+        },
+        end: {
+          line: 9,
+          column: 19
+        }
+      },
+      "6": {
+        start: {
+          line: 11,
+          column: 8
+        },
+        end: {
+          line: 11,
+          column: 47
+        }
+      },
+      "7": {
+        start: {
+          line: 14,
+          column: 8
+        },
+        end: {
+          line: 14,
+          column: 29
+        }
+      }
+    },
+    fnMap: {
+      "0": {
+        name: "(anonymous_0)",
+        decl: {
+          start: {
+            line: 7,
+            column: 12
+          },
+          end: {
+            line: 7,
+            column: 13
+          }
+        },
+        loc: {
+          start: {
+            line: 7,
+            column: 24
+          },
+          end: {
+            line: 12,
+            column: 5
+          }
+        },
+        line: 7
+      },
+      "1": {
+        name: "(anonymous_1)",
+        decl: {
+          start: {
+            line: 13,
+            column: 14
+          },
+          end: {
+            line: 13,
+            column: 15
+          }
+        },
+        loc: {
+          start: {
+            line: 13,
+            column: 32
+          },
+          end: {
+            line: 15,
+            column: 5
+          }
+        },
+        line: 13
+      }
+    },
+    branchMap: {
+      "0": {
+        loc: {
+          start: {
+            line: 8,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 9
+          }
+        },
+        type: "if",
+        locations: [{
+          start: {
+            line: 8,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 9
+          }
+        }, {
+          start: {
+            line: 8,
+            column: 8
+          },
+          end: {
+            line: 10,
+            column: 9
+          }
+        }],
+        line: 8
+      },
+      "1": {
+        loc: {
+          start: {
+            line: 14,
+            column: 15
+          },
+          end: {
+            line: 14,
+            column: 28
+          }
+        },
+        type: "binary-expr",
+        locations: [{
+          start: {
+            line: 14,
+            column: 15
+          },
+          end: {
+            line: 14,
+            column: 18
+          }
+        }, {
+          start: {
+            line: 14,
+            column: 22
+          },
+          end: {
+            line: 14,
+            column: 28
+          }
+        }],
+        line: 14
+      }
+    },
+    s: {
+      "0": 0,
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0
+    },
+    f: {
+      "0": 0,
+      "1": 0
+    },
+    b: {
+      "0": [0, 0],
+      "1": [0, 0]
+    },
+    _coverageSchema: "43e27e138ebf9cfc5966b082cf9a028302ed4184",
+    hash: "70f68f06bd0413a407d9c54f26844395f20a501e"
+  };
+  var coverage = global[gcv] || (global[gcv] = {});
+
+  if (coverage[path] && coverage[path].hash === hash) {
+    return coverage[path];
+  }
+
+  return coverage[path] = coverageData;
+}();
+
+cov_kcw9ud09y.s[0]++;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var loadTpl_1 =
+/* istanbul ignore next */
+(cov_kcw9ud09y.s[1]++, require("@/utils/loadTpl"));
+var tpl =
+/* istanbul ignore next */
+(cov_kcw9ud09y.s[2]++, '');
+
+/* istanbul ignore next */
+cov_kcw9ud09y.s[3]++;
+exports.ReactRoute = {
+  name: 'react-route',
+  onInit: function () {
+    /* istanbul ignore next */
+    cov_kcw9ud09y.f[0]++;
+    cov_kcw9ud09y.s[4]++;
+
+    if (tpl) {
+      /* istanbul ignore next */
+      cov_kcw9ud09y.b[0][0]++;
+      cov_kcw9ud09y.s[5]++;
+      return;
+    } else
+    /* istanbul ignore next */
+    {
+      cov_kcw9ud09y.b[0][1]++;
+    }
+
+    cov_kcw9ud09y.s[6]++;
+    tpl = loadTpl_1.loadTpl('react-route');
+  },
+  onReturn: function (source) {
+    /* istanbul ignore next */
+    cov_kcw9ud09y.f[1]++;
+    cov_kcw9ud09y.s[7]++;
+    return (
+      /* istanbul ignore next */
+      (cov_kcw9ud09y.b[1][0]++, tpl) ||
+      /* istanbul ignore next */
+      (cov_kcw9ud09y.b[1][1]++, source)
+    );
+  }
+};

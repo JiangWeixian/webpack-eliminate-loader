@@ -12,7 +12,11 @@ export const loadTpl = (tplName: SupportTemplates): string => {
   if (cached[tplName]) {
     return cached[tplName] || ''
   }
-  const presetTpl = fs.readFileSync(path.resolve(TEPLATES_PATH, `${tplName}.tpl`)).toString()
-  cached[tplName] = presetTpl
-  return presetTpl
+  try {
+    const presetTpl = fs.readFileSync(path.resolve(TEPLATES_PATH, `${tplName}.tpl`)).toString()
+    cached[tplName] = presetTpl
+    return presetTpl
+  } catch {
+    throw new Error("file dont's exited")
+  }
 }
