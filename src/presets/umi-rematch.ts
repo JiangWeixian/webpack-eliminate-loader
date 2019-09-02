@@ -11,7 +11,7 @@ const isRematchModel = (resourcePath: string) => {
   return minimatch(resourcePath, '**/models/**')
 }
 
-export const UmiRoute: Preset = {
+export const UmiRematch: Preset = {
   onInit() {
     if (tpl) {
       return

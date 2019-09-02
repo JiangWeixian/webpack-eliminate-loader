@@ -1,11 +1,12 @@
 import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
-import { presetFactory, ReactRoute, UmiRoute } from './presets'
+import { presetFactory, ReactRoute, UmiRoute, UmiRematch } from './presets'
 
 const presets = {
   'react-route': presetFactory.create(ReactRoute),
   'umi-route': presetFactory.create(UmiRoute),
+  'umi-rematch': presetFactory.create(UmiRematch),
 }
 
 function loader(this: Webpack.loader.LoaderContext, source: string) {
