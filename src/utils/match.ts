@@ -1,13 +1,28 @@
 import minimatch from 'minimatch'
 import { Options } from '@/typings'
 
+const isMatched = (resourcePath?: string, pattern?: string) => {
+  if (!resourcePath || !pattern) {
+    return false
+  }
+  try {
+    console.log(
+      resourcePath,
+      pattern,
+      minimatch(resourcePath, pattern) || resourcePath.match(pattern),
+    )
+    return minimatch(resourcePath, pattern) || resourcePath.match(pattern)
+  } catch {
+    return false
+  }
+}
+
 export const hasIncluded = (resourcePath?: string, include: Options['include'] = []) => {
   if (!resourcePath || !include) {
     return false
   }
   return include.some(v => {
-    console.log(resourcePath, v, minimatch(resourcePath, v))
-    return minimatch(resourcePath, v)
+    return isMatched(resourcePath, v)
   })
 }
 
@@ -16,7 +31,7 @@ export const hasExcluded = (resourcePath?: string, exclude: Options['exclude'] =
     return true
   }
   return exclude.some(v => {
-    return minimatch(resourcePath, v)
+    return isMatched(resourcePath, v)
   })
 }
 
