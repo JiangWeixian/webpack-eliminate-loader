@@ -41,7 +41,7 @@ export const hasExcluded = (resourcePath?: string, exclude: Options['exclude'] =
 }
 
 export const match = (resourcePath?: string, options?: Options) => {
-  if (!options) {
+  if (!options || !resourcePath) {
     return false
   }
   if (options.include) {
