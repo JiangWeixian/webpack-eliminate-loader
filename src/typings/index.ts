@@ -2,7 +2,7 @@
 
 export type Validation = [boolean | undefined, string]
 
-export type SupportPresets = 'react-route'
+export type SupportPresets = 'react-route' | 'umi-route'
 
 export type Presets = {
   [key in SupportPresets]: Preset

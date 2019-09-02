@@ -8,6 +8,9 @@ export const presetFactory = {
         preset.onInit && preset.onInit()
       },
       onMatch: (resourcePath: string, options: Options) => {
+        if (preset.onMatch) {
+          return preset.onMatch(resourcePath, options)
+        }
         if (options.include) {
           return options.include.some(v => {
             return !resourcePath.match(v)
