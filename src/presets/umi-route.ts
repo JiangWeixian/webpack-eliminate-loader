@@ -8,9 +8,11 @@ const defaultIncludes = [
   '**/*/_layout?(.tsx|.jsx)',
   '**/index/**',
   '**/src/pages/*?(.tsx|.jsx|.ts|.js)',
+  '**/src/*?(.tsx|.jsx|.ts|.js)',
   '**/NotFound?(.jsx|.tsx)',
   '**/src/pages/.umi/**',
   '**/src/!(pages)/**', // include file like `src/hooks/** | src/components/**`
+  '**/components/**',
   // tep add models
   '**/models/**',
 ]
