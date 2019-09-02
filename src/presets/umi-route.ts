@@ -10,6 +10,7 @@ const defaultIncludes = [
   '**/src/pages/index?(.tsx|jsx)',
   '**/NotFound?(.jsx|.tsx)',
   '**/src/pages/.umi/**',
+  '**/!(pages)/**', // include file like `src/hooks/** | src/components/**`
 ]
 
 export const UmiRoute: Preset = {

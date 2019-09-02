@@ -6,7 +6,7 @@ const isMatched = (resourcePath?: string, pattern?: string) => {
     return false
   }
   try {
-    return minimatch(resourcePath, pattern) || !!resourcePath.match(pattern)
+    return minimatch(resourcePath, pattern, { dot: true }) || !!resourcePath.match(pattern)
   } catch {
     return false
   }
