@@ -1,6 +1,6 @@
 {
   "name": "webpack-eliminate-loader",
-  "version": "0.1.1-0",
+  "version": "0.1.1-1",
   "main": "lib/webpack-eliminate-loader.cjs.js",
   "module": "lib/webpack-eliminate-loader.esm.js",
   "browser": "lib/webpack-eliminate-loader.umd.js",
