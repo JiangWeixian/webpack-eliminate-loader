@@ -6,6 +6,11 @@ const isMatched = (resourcePath?: string, pattern?: string) => {
     return false
   }
   try {
+    console.log(
+      resourcePath,
+      pattern,
+      minimatch(resourcePath, pattern, { dot: true }) || !!resourcePath.match(pattern),
+    )
     return minimatch(resourcePath, pattern, { dot: true }) || !!resourcePath.match(pattern)
   } catch {
     return false
