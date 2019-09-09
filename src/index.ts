@@ -1,3 +1,7 @@
+// support alias
+import alias from 'module-alias'
+alias()
+
 import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
