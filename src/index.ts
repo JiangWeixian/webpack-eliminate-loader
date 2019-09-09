@@ -5,13 +5,13 @@ import { presetFactory, ReactRoute, UmiRoute, UmiRematch } from './presets'
 import { Preset, Options, Presets } from '@/typings'
 export { utils } from './utils'
 
-const presets: Presets = {
+export const presets: Presets = {
   'react-route': presetFactory.create(ReactRoute),
   'umi-route': presetFactory.create(UmiRoute),
   'umi-rematch': presetFactory.create(UmiRematch),
 }
 
-export const getPresets = (options: Options): Required<Preset>[] => {
+const getPresets = (options: Options): Required<Preset>[] => {
   return options.presets
     ? options.presets.map(p => {
         const isStrPreset = typeof p === 'string'

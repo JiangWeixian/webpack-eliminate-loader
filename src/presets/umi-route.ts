@@ -13,8 +13,6 @@ const defaultIncludes = [
   '**/src/pages/.umi/**',
   '**/src/!(pages)/**', // include file like `src/hooks/** | src/components/**`
   '**/components/**',
-  // tep add models
-  '**/models/**',
 ]
 
 export const UmiRoute: Preset = {

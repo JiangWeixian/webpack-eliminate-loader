@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1567420060105" clover="3.2.0">
-  <project timestamp="1567420060105" name="All files">
+<coverage generated="1567994917205" clover="3.2.0">
+  <project timestamp="1567994917205" name="All files">
     <metrics statements="93" coveredstatements="63" conditionals="58" coveredconditionals="26" methods="21" coveredmethods="11" elements="172" coveredelements="100" complexity="0" loc="93" ncloc="93" packages="2" files="8" classes="8"/>
     <package name="presets">
       <metrics statements="49" coveredstatements="30" conditionals="24" coveredconditionals="3" methods="13" coveredmethods="4"/>
@@ -61,12 +61,12 @@
         <line num="3" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
-        <line num="20" count="1" type="stmt"/>
-        <line num="23" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="21" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="22" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="35" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="33" count="0" type="cond" truecount="0" falsecount="2"/>
       </file>
     </package>
     <package name="utils">
