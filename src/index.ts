@@ -7,8 +7,8 @@ export { utils } from './utils'
 
 export const presets: Presets = {
   'react-route': presetFactory.create(ReactRoute),
-  'umi-route': presetFactory.create(UmiRoute),
   'umi-rematch': presetFactory.create(UmiRematch),
+  'umi-route': presetFactory.create(UmiRoute),
 }
 
 const getPresets = (options: Options): Required<Preset>[] => {
