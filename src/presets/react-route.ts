@@ -21,7 +21,10 @@ export const ReactRoute: Preset = {
     if (!resourcePath.endsWith('.tsx') && !resourcePath.endsWith('.jsx')) {
       return false
     }
-    return match(resourcePath, options)
+    return match(resourcePath, {
+      ...options,
+      include: (options.include || []).concat(defaultIncludes),
+    })
   },
   onReturn(source) {
     return tpl || source
