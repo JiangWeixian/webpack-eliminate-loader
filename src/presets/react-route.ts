@@ -4,7 +4,10 @@ import { match } from '../utils/match'
 
 let tpl = ''
 
-const defaultIncludes = ['**/']
+const defaultIncludes = [
+  '**/src/*?(.tsx|.ts|.js|.jsx)',
+  '**/src/!(pages)/**', // include file like `src/hooks/** | src/components/**`
+]
 
 export const ReactRoute: Preset = {
   name: 'react-route',
