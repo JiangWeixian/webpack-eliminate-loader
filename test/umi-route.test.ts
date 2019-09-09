@@ -1,4 +1,4 @@
-import { presets } from '../lib'
+import { presetFactory, UmiRoute } from '../src/presets'
 
 const defaultRoutes: string[] = [
   'src/layouts',
@@ -15,7 +15,7 @@ const defaultRoutes: string[] = [
 
 describe('start test umi-route preset', () => {
   test('default includes should work', () => {
-    const ReactRoutePreset = presets['umi-route']
+    const ReactRoutePreset = presetFactory.create(UmiRoute)
     defaultRoutes.forEach((v: string) => {
       expect(
         ReactRoutePreset.onMatch(v, {
@@ -26,10 +26,10 @@ describe('start test umi-route preset', () => {
     })
   })
 
-  test('only include included-page endwith .tsx', () => {
-    const ReactRoutePreset = presets['umi-route']
-    const routes = ['src/pages/page-three/pageThree.tsx']
-    routes.forEach((v: string) => {
+  test('only process pages endwith .tsx|.jsx', () => {
+    const ReactRoutePreset = presetFactory.create(UmiRoute)
+    const pages = ['src/pages/page-three/pageThree.tsx']
+    pages.forEach((v: string) => {
       expect(
         ReactRoutePreset.onMatch(v, {
           presets: ['umi-route'],
@@ -37,12 +37,8 @@ describe('start test umi-route preset', () => {
         }),
       ).toBe(true)
     })
-  })
-
-  test('only include included-page endwith .tsx', () => {
-    const ReactRoutePreset = presets['umi-route']
-    const routes = ['src/pages/page-three/models/pageThree.ts']
-    routes.forEach((v: string) => {
+    const models = ['src/pages/page-three/models/pageThree.ts']
+    models.forEach((v: string) => {
       expect(
         ReactRoutePreset.onMatch(v, {
           presets: ['umi-route'],

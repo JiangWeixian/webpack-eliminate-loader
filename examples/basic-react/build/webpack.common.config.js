@@ -37,7 +37,7 @@ const config = {
           {
             loader: 'webpack-eliminate-loader',
             options: {
-              exclude: ['src/pages/Home'],
+              include: ['src/pages/Home'],
               preset: ['react-route'],
             },
           },

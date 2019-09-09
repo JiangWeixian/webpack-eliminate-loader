@@ -1,6 +1,16 @@
 import minimatch from 'minimatch'
 import { Options } from '../typings'
 
+export const isPages = (resourcePath: string): boolean => {
+  if (!resourcePath) {
+    return false
+  }
+  if (minimatch(resourcePath, '**/pages/**')) {
+    return resourcePath.endsWith('.tsx') || resourcePath.endsWith('.jsx')
+  }
+  return false
+}
+
 const isMatched = (resourcePath?: string, pattern?: string) => {
   if (!resourcePath || !pattern) {
     return false

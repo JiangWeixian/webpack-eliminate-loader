@@ -1,10 +1,10 @@
-import { presets } from '../lib'
+import { presetFactory, UmiRematch } from '../src/presets'
 
 const defaultRoutes: string[] = ['src/pages/User/models/user.ts']
 
 describe('start test umi-rematch preset', () => {
   test('should work with umi-route', () => {
-    const RematchPreset = presets['umi-rematch']
+    const RematchPreset = presetFactory.create(UmiRematch)
     defaultRoutes.forEach((v: string) => {
       expect(
         RematchPreset.onMatch(v, {

@@ -1,6 +1,6 @@
 import { loadTpl } from '../utils/loadTpl'
 import { Preset } from '../typings'
-import { match } from '../utils/match'
+import { match, isPages } from '../utils/match'
 
 let tpl = ''
 
@@ -18,7 +18,7 @@ export const ReactRoute: Preset = {
     tpl = loadTpl('react-route')
   },
   onMatch: (resourcePath, options) => {
-    if (!resourcePath.endsWith('.tsx') && !resourcePath.endsWith('.jsx')) {
+    if (!isPages(resourcePath)) {
       return false
     }
     return match(resourcePath, {

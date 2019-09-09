@@ -3,9 +3,8 @@ import Webpack from 'webpack'
 import { getOptions } from './utils/options'
 import { presetFactory, ReactRoute, UmiRoute, UmiRematch } from './presets'
 import { Preset, Options, Presets } from './typings'
-export { utils } from './utils'
 
-export const presets: Presets = {
+const presets: Presets = {
   'react-route': presetFactory.create(ReactRoute),
   'umi-rematch': presetFactory.create(UmiRematch),
   'umi-route': presetFactory.create(UmiRoute),
