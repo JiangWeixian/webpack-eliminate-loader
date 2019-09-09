@@ -3,7 +3,7 @@
 
 [![npm](https://img.shields.io/npm/v/webpack-eliminate-loader?style=for-the-badge)](https://github.com/JiangWeixian/templates/tree/master/packages/core) [![GitHub](https://img.shields.io/github/license/jiangweixian/webpack-eliminate-loader?style=for-the-badge)](https://github.com/JiangWeixian/templates/tree/master/packages/rollup-template)
 
-- [why-this-repo?](https://img.shields.io/github/license/jiangweixian/webpack-eliminate-loader/docs/why-this-repo.md)
+- [why-this-repo?](https://github.com/JiangWeixian/webpack-eliminate-loader/blob/master/docs/why-this-repo.md)
 - [Limits](#limits)
 - [Usage](#useage)
 - [Options](#options)
@@ -13,7 +13,7 @@
 only speed-up webpack in `development` mode build up.
 
 ## Useage
-> see more [examples](https://img.shields.io/github/license/jiangweixian/webpack-eliminate-loader/examples)
+> see more [examples](https://github.com/JiangWeixian/webpack-eliminate-loader/tree/master/examples)
 
 `npm install webpack-eliminate-loader --save-dev`
 
