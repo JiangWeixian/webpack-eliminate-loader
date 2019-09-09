@@ -1,5 +1,5 @@
-import { loadTpl } from '@/utils/loadTpl'
-import { Preset } from '@/typings'
+import { loadTpl } from '../utils/loadTpl'
+import { Preset } from '../typings'
 
 let tpl = ''
 

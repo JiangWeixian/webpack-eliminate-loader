@@ -15,11 +15,7 @@
     "noImplicitReturns": true,
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
-    "outDir": "lib",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "outDir": "lib"
   },
   "exclude": ["node_modules", "lib", "examples", "test", "templates"]
 }

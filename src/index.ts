@@ -2,7 +2,7 @@ import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
 import { presetFactory, ReactRoute, UmiRoute, UmiRematch } from './presets'
-import { Preset, Options, Presets } from '@/typings'
+import { Preset, Options, Presets } from './typings'
 export { utils } from './utils'
 
 export const presets: Presets = {

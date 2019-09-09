@@ -1,8 +1,8 @@
 import minimatch from 'minimatch'
 
-import { loadTpl } from '@/utils/loadTpl'
-import { Preset } from '@/typings'
-import { match } from '@/utils/match'
+import { loadTpl } from '../utils/loadTpl'
+import { Preset } from '../typings'
+import { match } from '../utils/match'
 
 let tpl = ''
 const defaultIncludes = ['**/src/*?(.tsx|.jsx|.ts|.js)']

@@ -1,7 +1,7 @@
 import Webpack from 'webpack'
 import loadUtils from 'loader-utils'
 // import validate from 'schema-utils'
-import { Options } from '@/typings'
+import { Options } from '../typings'
 
 // const schema = {
 //   type: 'object',

@@ -1,5 +1,5 @@
 import minimatch from 'minimatch'
-import { Options } from '@/typings'
+import { Options } from '../typings'
 
 const isMatched = (resourcePath?: string, pattern?: string) => {
   if (!resourcePath || !pattern) {

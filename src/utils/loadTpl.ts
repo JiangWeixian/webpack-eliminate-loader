@@ -1,7 +1,7 @@
 import path from 'path'
 import fs from 'fs'
 
-import { SupportTemplates } from '@/typings'
+import { SupportTemplates } from '../typings'
 
 const TEPLATES_PATH = path.resolve(__dirname, '../../templates')
 export const cached: {

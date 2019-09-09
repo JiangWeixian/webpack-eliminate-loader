@@ -1,6 +1,6 @@
-import { Preset, Options } from '@/typings'
-import { validate } from '@/utils/validate'
-import { match } from '@/utils/match'
+import { Preset, Options } from '../typings'
+import { validate } from '../utils/validate'
+import { match } from '../utils/match'
 
 export const presetFactory = {
   create(preset: Preset): Required<Preset> {
