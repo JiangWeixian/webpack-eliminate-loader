@@ -4,6 +4,8 @@ import { match } from '../utils/match'
 
 let tpl = ''
 
+const defaultIncludes = ['**/']
+
 export const ReactRoute: Preset = {
   name: 'react-route',
   onInit() {

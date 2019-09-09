@@ -49,8 +49,8 @@ tsUse
 | Options | Usage | Default |
 |:---|:---:|---:|
 | presets| the way of how this loader work. Currently, only support `umi-route`, `react-route`, `umi-rematch`(need works with `umi-route`) | |
-| include | only build-up pages-in-include, we will have some default include pages | [] |
-| exclude | will not build-up pages-in-exclude  | [] |
+| include | `glob-pattern-like` string, only build-up pages-in-include, we will have some default include pages | [] |
+| exclude | `glob-pattern-like` string, will not build-up pages-in-exclude  | [] |
 
 **NOTE:**
 
