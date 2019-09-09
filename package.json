@@ -1,6 +1,6 @@
 {
   "name": "webpack-eliminate-loader",
-  "version": "0.1.1-1",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "repository": {
@@ -8,7 +8,9 @@
   },
   "watch": {
     "run_dev": {
-      "patterns": ["src"],
+      "patterns": [
+        "src"
+      ],
       "extensions": "ts",
       "quiet": true,
       "legacyWatch": true,
