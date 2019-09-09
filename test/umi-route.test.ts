@@ -26,9 +26,22 @@ describe('start test umi-route preset', () => {
     })
   })
 
-  test('only include included-page', () => {
+  test('only include included-page endwith .tsx', () => {
     const ReactRoutePreset = presets['umi-route']
-    const routes = ['src/pages/Test']
+    const routes = ['src/pages/page-three/pageThree.tsx']
+    routes.forEach((v: string) => {
+      expect(
+        ReactRoutePreset.onMatch(v, {
+          presets: ['umi-route'],
+          include: ['src/pages/Test'],
+        }),
+      ).toBe(true)
+    })
+  })
+
+  test('only include included-page endwith .tsx', () => {
+    const ReactRoutePreset = presets['umi-route']
+    const routes = ['src/pages/page-three/models/pageThree.ts']
     routes.forEach((v: string) => {
       expect(
         ReactRoutePreset.onMatch(v, {

@@ -24,6 +24,9 @@ export const UmiRoute: Preset = {
     tpl = loadTpl('react-route')
   },
   onMatch: (resourcePath, options) => {
+    if (!resourcePath.endsWith('.tsx') && !resourcePath.endsWith('.jsx')) {
+      return false
+    }
     return match(resourcePath, {
       ...options,
       include: (options.include || []).concat(defaultIncludes),
