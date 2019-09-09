@@ -1,6 +1,5 @@
 // support alias
-import alias from 'module-alias'
-alias()
+require('module-alias/register')
 
 import Webpack from 'webpack'
 
