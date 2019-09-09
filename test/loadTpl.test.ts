@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { utils } from '../lib/webpack-eliminate-loader.cjs.js'
+import { utils } from '../lib'
 
 describe('start load template', () => {
   test('load react-route tpl currently', () => {

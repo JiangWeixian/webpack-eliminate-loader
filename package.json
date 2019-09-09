@@ -7,7 +7,7 @@
     "url": "https://github.com/JiangWeixian/webpack-eliminate-loader"
   },
   "watch": {
-    "build": {
+    "run_dev": {
       "patterns": ["src"],
       "extensions": "ts",
       "quiet": true,
@@ -44,7 +44,8 @@
   },
   "scripts": {
     "build": "rimraf lib && tsc",
-    "dev": "npm-watch",
+    "run_dev": "rimraf lib && tsc",
+    "dev": "npm-watch run_dev",
     "test": "jest",
     "pretest": "npm run build",
     "update": "npm update && npm update --save-dev",

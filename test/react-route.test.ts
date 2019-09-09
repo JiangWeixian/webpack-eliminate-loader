@@ -1,4 +1,4 @@
-import { presets } from '../lib/webpack-eliminate-loader.cjs.js'
+import { presets } from '../lib'
 import fs from 'fs'
 import path from 'path'
 

@@ -3,7 +3,7 @@ import fs from 'fs'
 
 import { SupportTemplates } from '@/typings'
 
-const TEPLATES_PATH = path.resolve(__dirname, '../templates/')
+const TEPLATES_PATH = path.resolve(__dirname, '../../templates')
 export const cached: {
   [key in SupportTemplates]?: string
 } = {}
