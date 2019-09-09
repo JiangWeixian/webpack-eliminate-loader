@@ -24,7 +24,7 @@ const config = {
         test: /\.tsx?$/,
         exclude: [/node_modules/],
         use: [
-          // { loader: 'cache-loader' },
+          { loader: 'cache-loader' },
           {
             loader: 'thread-loader',
             options: webpackConfig.common.workerPool,
@@ -38,7 +38,7 @@ const config = {
             loader: 'webpack-eliminate-loader',
             options: {
               exclude: ['src/pages/Home'],
-              preset: 'react-route',
+              preset: ['react-route'],
             },
           },
         ],

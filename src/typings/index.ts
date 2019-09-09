@@ -18,7 +18,7 @@ export type Options = {
 
 export type Preset = {
   name: string
-  onInit?: (...args: any) => void
+  onInit?: (...args: any[]) => void
   onMatch?: (resourcePath: string, options: Options) => boolean
   onReturn?: (source: string) => string
 }
