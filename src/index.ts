@@ -42,6 +42,7 @@ function loader(this: Webpack.loader.LoaderContext, source: string) {
     const currentPreset = allPresets[i]
     if (currentPreset) {
       currentPreset.onInit()
+      // get first match result
       if (currentPreset.onMatch(this.resourcePath, options)) {
         result = currentPreset.onReturn(source)
         break

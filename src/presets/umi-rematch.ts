@@ -8,7 +8,7 @@ let tpl = ''
 const defaultIncludes = ['**/src/*?(.tsx|.jsx|.ts|.js)']
 
 const isRematchModel = (resourcePath: string) => {
-  return minimatch(resourcePath, '**/models/**')
+  return minimatch(resourcePath, '**/models/**') || minimatch(resourcePath, '**/model/**')
 }
 
 export const UmiRematch: Preset = {

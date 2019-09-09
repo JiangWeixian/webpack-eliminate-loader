@@ -1,28 +1,17 @@
 import { presets } from '../lib'
 
-const defaultRoutes: string[] = [
-  'src/layouts',
-  'src/home/_layout.tsx',
-  'src/home/_layout.jsx',
-  'src/index',
-  'src/index/index',
-  'src/pages/index.tsx',
-  'xxx/NotFound.jsx',
-  'src/pages/.umi/xx.js',
-  'src/hooks/xx',
-  'src/components/xx/index.jsx',
-]
+const defaultRoutes: string[] = ['src/pages/User/models/user.ts']
 
 describe('start test umi-rematch preset', () => {
   test('should work with umi-route', () => {
-    const ReactRoutePreset = presets['umi-route']
+    const RematchPreset = presets['umi-rematch']
     defaultRoutes.forEach((v: string) => {
       expect(
-        ReactRoutePreset.onMatch(v, {
-          presets: ['umi-route', 'umi-rematch'],
-          include: [],
+        RematchPreset.onMatch(v, {
+          presets: ['umi-rematch'],
+          include: ['src/pages/Home'],
         }),
-      ).toBe(false)
+      ).toBe(true)
     })
   })
 })
