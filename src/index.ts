@@ -1,6 +1,3 @@
-// support alias
-require('module-alias/register')
-
 import Webpack from 'webpack'
 
 import { getOptions } from './utils/options'
