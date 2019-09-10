@@ -9,8 +9,11 @@ jobs:
       - name: PR opened filter
         uses: actions/bin/filter@master
         with:
-          args: action synchronize
+          args: action opened
       - name: PR Labeler
         uses: TimonVS/pr-labeler@master
+        needs: PR opened filter
+        with:
+          args: action opened
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
