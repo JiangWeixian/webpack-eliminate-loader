@@ -1,11 +1,8 @@
-name: Labeler
-on: [pull_request]
+label1:
+  - example1/**/*
 
-jobs:
-  label:
-    runs-on: ubuntu-latest
+label2: example2/*
 
-    steps:
-      - uses: actions/labeler@v2
-        with:
-          repo-token: '${{ secrets.GITHUB_TOKEN }}'
+label3:
+  - example3/*
+  - example3/**/*.yml
