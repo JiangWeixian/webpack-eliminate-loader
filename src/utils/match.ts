@@ -1,4 +1,6 @@
 import minimatch from 'minimatch'
+import isEmpty from 'lodash.isempty'
+
 import { Options } from '../typings'
 
 export const isPages = (resourcePath: string): boolean => {
@@ -28,7 +30,7 @@ const isMatched = (resourcePath?: string, pattern?: string) => {
  * @param include
  */
 export const hasIncluded = (resourcePath?: string, include: Options['include'] = []) => {
-  if (!resourcePath || !include) {
+  if (!resourcePath || !include || isEmpty(include)) {
     return true
   }
   return include.some(v => {
@@ -42,7 +44,7 @@ export const hasIncluded = (resourcePath?: string, include: Options['include'] =
  * @param exclude
  */
 export const hasExcluded = (resourcePath?: string, exclude: Options['exclude'] = []) => {
-  if (!resourcePath || !exclude) {
+  if (!resourcePath || !exclude || isEmpty(exclude)) {
     return false
   }
   return exclude.some(v => {

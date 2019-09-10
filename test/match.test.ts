@@ -22,6 +22,15 @@ describe('start test utils.match', () => {
     expect(hasExcluded('src/pages/home.jsx', ['**/pages/**'])).toBe(true)
   })
 
+  test('match should return false when options.include and options.exclude is empty or empty array', () => {
+    expect(match('src/pages/home.jsx', { presets: ['react-route'] })).toBe(false)
+    expect(match('src/pages/home.jsx', { presets: ['react-route'], include: [] })).toBe(false)
+    expect(match('src/pages/home.jsx', { presets: ['react-route'], exclude: [] })).toBe(false)
+    expect(
+      match('src/pages/home.jsx', { presets: ['react-route'], exclude: [], include: [] }),
+    ).toBe(false)
+  })
+
   test('match should return false when options is undefined', () => {
     expect(match('src/pages/home.jsx')).toBe(false)
   })
