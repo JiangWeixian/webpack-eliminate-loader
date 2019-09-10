@@ -27,4 +27,32 @@ describe('start test presets.factory', () => {
       }),
     ).toBe(false)
   })
+
+  test('always return false when options.exclude or options.include is empty or empty-array', () => {
+    const ReactRoutePreset = presetFactory.create(ReactRoute)
+    expect(
+      ReactRoutePreset.onMatch('src/pages/home.jsx', {
+        presets: ['react-route'],
+        exclude: [],
+      }),
+    ).toBe(false)
+    expect(
+      ReactRoutePreset.onMatch('src/pages/home.jsx', {
+        presets: ['react-route'],
+        include: [],
+      }),
+    ).toBe(false)
+    expect(
+      ReactRoutePreset.onMatch('src/pages/home.jsx', {
+        presets: ['react-route'],
+        include: [],
+        exclude: [],
+      }),
+    ).toBe(false)
+    expect(
+      ReactRoutePreset.onMatch('src/pages/home.jsx', {
+        presets: ['react-route'],
+      }),
+    ).toBe(false)
+  })
 })
