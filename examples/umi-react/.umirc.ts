@@ -27,7 +27,7 @@ const config: IConfig = {
       .loader('webpack-eliminate-loader')
       .options({
         presets: ['umi-route', 'umi-rematch'],
-        include: ['src/pages/page-one'],
+        include: [],
       })
       .after('ts-loader');
   },

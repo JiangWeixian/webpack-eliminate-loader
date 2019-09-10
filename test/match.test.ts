@@ -1,4 +1,4 @@
-import { match, hasIncluded, hasExcluded } from '../src/utils/match'
+import { match, hasIncluded, hasExcluded, isUneedMatch } from '../src/utils/match'
 
 describe('start test utils.match', () => {
   test('hasInclude should return true when first arg is undefined', () => {
@@ -29,6 +29,13 @@ describe('start test utils.match', () => {
     expect(
       match('src/pages/home.jsx', { presets: ['react-route'], exclude: [], include: [] }),
     ).toBe(false)
+  })
+
+  test('unneed match when options.include and options.exclude is empty or empty array', () => {
+    expect(isUneedMatch({ presets: ['react-route'] })).toBe(true)
+    expect(isUneedMatch({ presets: ['react-route'], include: [] })).toBe(true)
+    expect(isUneedMatch({ presets: ['react-route'], exclude: [] })).toBe(true)
+    expect(isUneedMatch({ presets: ['react-route'], exclude: [], include: [] })).toBe(true)
   })
 
   test('match should return false when options is undefined', () => {

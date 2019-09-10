@@ -1,6 +1,6 @@
 import { Preset, Options } from '../typings'
 import { validate } from '../utils/validate'
-import { match } from '../utils/match'
+import { match, isUneedMatch } from '../utils/match'
 
 export const presetFactory = {
   create(preset: Preset): Required<Preset> {
@@ -10,6 +10,9 @@ export const presetFactory = {
         preset.onInit && preset.onInit()
       },
       onMatch: (resourcePath: string, options: Options) => {
+        if (isUneedMatch(options)) {
+          return false
+        }
         if (preset.onMatch) {
           validate([[typeof preset.onMatch !== 'function', 'preset.onMatch should be function']])
           return preset.onMatch(resourcePath, options)

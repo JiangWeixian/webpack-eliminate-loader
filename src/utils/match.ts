@@ -3,6 +3,10 @@ import isEmpty from 'lodash.isempty'
 
 import { Options } from '../typings'
 
+/**
+ * check resourcepath is route page or not
+ * @param resourcePath
+ */
 export const isPages = (resourcePath: string): boolean => {
   if (!resourcePath) {
     return false
@@ -11,6 +15,16 @@ export const isPages = (resourcePath: string): boolean => {
     return resourcePath.endsWith('.tsx') || resourcePath.endsWith('.jsx')
   }
   return false
+}
+
+export const isUneedMatch = (options: Options): boolean => {
+  if (
+    (options.include && !isEmpty(options.include)) ||
+    (options.exclude && !isEmpty(options.exclude))
+  ) {
+    return false
+  }
+  return true
 }
 
 const isMatched = (resourcePath?: string, pattern?: string) => {
