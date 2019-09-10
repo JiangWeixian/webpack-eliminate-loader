@@ -12,7 +12,6 @@ jobs:
           args: action opened
       - name: PR Labeler
         uses: TimonVS/pr-labeler@master
-        needs: PR opened filter
         with:
           args: action opened
         env:
