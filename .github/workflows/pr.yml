@@ -1,18 +1,10 @@
-on: pull_request
-name: Add label to PR
+name: Label PRs
+on: [pull_request]
 jobs:
-  PR:
-    name: PR opened filter
+  pr-labeler:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: PR opened filter
-        uses: actions/bin/filter@master
-        with:
-          args: action opened
-      - name: PR Labeler
-        uses: TimonVS/pr-labeler@master
-        with:
-          args: action opened
+      - uses: TimonVS/pr-labeler@master
+        if: github.event.action == 'opened'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
