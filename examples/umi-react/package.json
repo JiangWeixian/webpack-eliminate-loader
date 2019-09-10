@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "webpack-eliminate-loader": "^1.0.1-4"
+    "webpack-eliminate-loader": "../.."
   },
   "devDependencies": {
     "@types/jest": "^23.3.12",
