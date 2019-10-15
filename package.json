@@ -6,6 +6,12 @@
   "repository": {
     "url": "https://github.com/JiangWeixian/webpack-eliminate-loader"
   },
+  "keywords": [
+    "webpack",
+    "webpack-loader",
+    "webpack-eliminate-loader",
+    "build-in-need"
+  ],
   "license": "MIT",
   "watch": {
     "run_dev": {
