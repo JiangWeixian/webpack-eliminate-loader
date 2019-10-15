@@ -27,10 +27,6 @@ const getPresets = (options: Options): Required<Preset>[] => {
 }
 
 function loader(this: Webpack.loader.LoaderContext, source: string) {
-  // only work in development mode
-  if (process.env.NODE_ENV === 'production') {
-    return source
-  }
   const options = getOptions(this)
   if (!options.presets) {
     return source
